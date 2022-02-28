@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e1d91530bd.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+        color: white;
+
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar::before {
+        background: url(/simon-abrams-k_T9Zj3SE8k-unsplash\ \(1\).jpg) no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.8;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        font-weight: bolder;
+        padding: 6px 20px;
+        margin: 10px;
+    }
+
+    .title h1 {
+        background: black;
+        border: 5px solid white;
+    }
+
+    .title span {
+        background: white;
+        color: black;
+    }
+
+    .menu {}
+
+    .menu ul {
+        display: flex;
+        position: relative;
+        right: 10px;
+    }
+
+    .menu ul li {
+        list-style: none;
+    }
+
+    .menu ul li a {
+        margin: 2px 2px;
+        padding: 2px 40px;
+        font-size: 1.5rem;
+    }
+
+    .menu ul li a:hover {
+        cursor: pointer;
+        background: black;
+        color: white;
+        transition: 0.3s ease-in-out;
+        border-radius: 20px 20px;
+    }
+
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 3.9rem;
+        position: relative;
+        width: 790px;
+        left: 70px;
+        top: 140px;
+    }
+
+    .main p {
+        color: black;
+    }
+
+    .main h1 {
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+
+    .main p {
+        color: black;
+    }
+
+    .btn {
+        background: #ffffff61;
+        color: black;
+        font-size: 1.5rem;
+        margin: 2px 2px;
+        padding: 9px 9px;
+        font-weight: lighter;
+        border: 2px solid black;
+        border-radius: 20px 20px;
+        position: relative;
+        top: 20px;
+    }
+
+    .btn:hover {
+        background: black;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .aboutme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top: 430px;
+        color: black;
+        font-size: 1.8rem;
+        margin: 2px 2px;
+        padding: 80px;
+    }
+
+    .aboutme h1 {
+        color: black;
+        font-size: 4rem;
+        position: relative;
+        text-decoration: underline;
+        bottom: 60px;
+    }
+
+    .aboutme h3 {
+        color: black;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .aboutme p {
+        color: black
+    }
+
+    .btn2 {
+        color: black;
+        font-size: 1.8rem;
+        margin: 2px 2px;
+        padding: 2px 20px;
+        position: relative;
+        top: 30px;
+        background: transparent;
+    }
+
+    .btn2:hover {
+        background: black;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top: 530px;
+    }
+
+    .quote h2 {
+        color: black;
+        font-size: 2rem;
+        position: relative;
+        top: 40px;
+    }
+
+
+    .quote p {
+        color: black;
+        font-size: 1.5rem;
+        position: relative;
+        top: 37px;
+    }
+
+    .quote span {
+        color: black;
+        font-size: 2rem;
+    }
+
+    .quote::before {
+        content: "";
+        background: url(/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg) no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    .end {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 777px;
+        font-size: 1.8rem;
+    }
+
+    .end h1 {
+        color: black;
+        font-size: 4rem;
+        padding: 15px 2px;
+        text-decoration: underline;
+    }
+
+    .end p {
+        color: black;
+    }
+
+    .btn3 {
+        color: black;
+        font-size: 1.8rem;
+        margin: 2px 2px;
+        padding: 2px 20px;
+        position: relative;
+        top: 30px;
+
+        background: transparent;
+    }
+
+    .btn3:hover {
+        background: black;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        padding: 2px 2px;
+        position: relative;
+        top: 900px;
+    }
+
+    .icons i {
+        color: black;
+        padding: 2px 50px;
+    }
+    .icons i:hover{
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <navbar class="navbar">
+        <div class="title">
+            <h1>PORT<span>FOLIO</span></h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a>HOME</a></li>
+                <li><a>ABOUT ME</a></li>
+                <li><a>HIRE ME</a></li>
+                <li><a>MORE</a></li>
+            </ul>
+        </div>
+    </navbar>
+    <section class="main">
+        <p>Hello, Myself</p>
+        <h1>Piyush Bhujbal</h1>
+        <p>I'm a Web Developer.</p>
+        <button class="btn"> Download Resume</button>
+    </section>
+    <section class="aboutme">
+        <h1>About Me</h1>
+        <h3>Developer & Designer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab cumque veniam quod ad excepturi, quibusdam
+            beatae similique. Ad, nam sed ipsum necessitatibus nisi repellat consectetur in obcaecati asperiores commodi
+            eveniet delectus dolorum facere rerum saepe distinctio, alias magni maxime labore neque dolore? Magnam,
+            vitae. Ratione, recusandae sapiente ea rerum laudantium deleniti perferendis necessitatibus temporibus
+            aspernatur placeat, maxime veniam repellendus? Culpa voluptates enim natus molestias quod qui consectetur,
+            accusantium nam nostrum non ratione hic exercitationem laboriosam aspernatur quos quaerat minus consequuntur
+            fugit nulla corporis nisi, iusto ipsum. Molestiae ab architecto porro voluptatem sint exercitationem,
+            asperiores laudantium mollitia quidem odio nihil?</p>
+        <button class="btn2">Lets Talk</button>
+    </section>
+    <section class="quote">
+        <h2><span>"</span>The more you explore,<br>the more you learn.</h2>
+        <p>-Sucess Key.</p>
+    </section>
+    <section class="end">
+        <h1>Stay Connected</h1>
+        <p>As you're looking for a designer for freelancing<br>work or if you want to hire me, get in touch.</p>
+        <button class="btn3">Mail Me</button>
+    </section>
+    <section class="icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <br>
+        <br>
+
+    </section>
+</body>
+
+</html>
